@@ -1,0 +1,27 @@
+Error while applying plan: Error: Unrecognized remote plugin message: 
+│ Failed to read any lines from plugin's stdout
+│ This usually means
+│   the plugin was not compiled for this architecture,
+│   the plugin is missing dynamic-link libraries necessary to run,
+│   the plugin is not executable by this process due to file permissions, or
+│   the plugin failed to negotiate the initial go-plugin protocol handshake
+│ 
+│ Additional notes about plugin:
+│   Path: .terraform/providers/registry.terraform.io/hashicorp/aws/6.14.1/darwin_arm64/terraform-provider-aws_v6.14.1_x5
+│   Mode: -rwxr-xr-x
+│   Owner: 501 [praky] (current: 501 [praky])
+│   Group: 20 [staff] (current: 20 [staff])
+│   MachO architecture: CpuArm64 (current architecture: arm64)
+
+Fix: Delete the terraform folder and re-initialize: rm -rf .terraform .terraform.lock.hcl
+
+==============
+
+Error: ╷
+│ Error: creating EC2 Instance: operation error EC2: RunInstances, https response error StatusCode: 400, RequestID: 20511e35-686c-479d-80b2-b170c64e5e65, api error InvalidParameterCombination: The specified instance type is not eligible for Free Tier. For a list of Free Tier instance types, run 'describe-instance-types' with the filter 'free-tier-eligible=true'.
+│ 
+│   with aws_instance.example,
+│   on main.tf line 5, in resource "aws_instance" "example":
+│    5: resource "aws_instance" "example" {
+│ 
+Fix: t2.micro is not free tier. t3.micro is 
