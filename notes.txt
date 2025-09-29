@@ -25,3 +25,8 @@ Error: ╷
 │    5: resource "aws_instance" "example" {
 │ 
 Fix: t2.micro is not free tier. t3.micro is 
+
+===========
+
+terraform apply was successful
+ 
