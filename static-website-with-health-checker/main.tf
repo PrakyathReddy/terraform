@@ -37,6 +37,6 @@ resource "aws_instance" "web" {
     security_groups = [aws_security_group.web_sg.id]
 
     tags {
-        Name: "TerraformDemoInstance"
+        Name = "TerraformDemoInstance"
     }
 }

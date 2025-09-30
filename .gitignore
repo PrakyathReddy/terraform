@@ -1,1 +1,3 @@
 .terraform/
+static-website-with-health-checker/.terraform
+static-website-with-health-checker/.terraform.lock.hcl
