@@ -34,7 +34,7 @@ resource "aws_security_group" "web_sg" {
 resource "aws_instance" "web" {
     ami = "ami-08982f1c5bf93d976"
     instance_type = "t3.micro"
-    security_groups = [aws_security_group.web_sg.id]
+    vpc_security_group_ids = [aws_security_group.web_sg.id]
 
     tags = {
         Name = "TerraformDemoInstance"
