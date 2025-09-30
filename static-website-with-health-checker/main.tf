@@ -2,7 +2,7 @@ resource "aws_security_group" "web_sg" {
     name = "web-sg-demo"
     description = "allow ssh and http"
 
-    ingress = {
+    ingress {
         description = "SSH"
         from_port = 22
         to_port = 22
@@ -26,7 +26,7 @@ resource "aws_security_group" "web_sg" {
         cidr_blocks = ["0.0.0.0/0"] 
     }
 
-    tags {
+    tags = {
         Name = "web-sg-demo"
     }
 }
@@ -36,7 +36,7 @@ resource "aws_instance" "web" {
     instance_type = "t3.micro"
     security_groups = [aws_security_group.web_sg.id]
 
-    tags {
+    tags = {
         Name = "TerraformDemoInstance"
     }
 }
