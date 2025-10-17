@@ -8,3 +8,4 @@ Terraform
 - used terraform.tfvars. Can be passed like: $ t plan -var-file=dev.tfvars
 - conditional expressions
 - builtin functions
+- modules

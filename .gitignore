@@ -6,3 +6,5 @@ static-website-with-health-checker/terraform.tfstate.backup
 create-ec2/terraform.tfstate.backup
 create-ec2/terraform.tfstate
 create-ec2/.terraform.tfstate.lock.info
+.terraform.lock.hcl
+.qodo
