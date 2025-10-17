@@ -10,3 +10,6 @@ create-ec2/.terraform.tfstate.lock.info
 .qodo
 terraform.tfstate
 terraform.tfstate.backup
+deploy_and_expose_app/yes
+deploy_and_expose_app/yes.pub
+deploy_and_expose_app/.terr*

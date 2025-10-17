@@ -11,3 +11,4 @@ Terraform
 - modules
 - remote backend - state file hosted on S3 bucket
 - enable state lock using dynamo DB
+- deploy and expose an app on ec2
