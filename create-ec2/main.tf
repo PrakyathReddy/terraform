@@ -1,4 +1,5 @@
 resource "aws_instance" "test" {
-    ami = var.aws_ami
-    instance_type = var.aws_freetier
+    count = var.true_or_false ? 2 : 3
+    ami = var.aws_ami 
+    instance_type = var.aws_us_east_1 
 }

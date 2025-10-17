@@ -5,4 +5,5 @@ Terraform
 - used variables to parameterise configuration
 - used output variables
 - reorganised the configuration into multiple files for better readability and modularity
-
+- used terraform.tfvars
+- conditional expressions
