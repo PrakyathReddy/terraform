@@ -8,7 +8,7 @@ variable "cidr" {
 
 resource "aws_key_pair" "example" {
     key_name = "demo_key_tf"
-    public_key = file("/Users/prakyathreddy/.ssh/id_ed25519.pub")
+    public_key = file("/Users/prakyathreddy/.ssh/id_rsa.pub")
 }
 
 resource "aws_vpc" "my_vpc" {
@@ -67,7 +67,7 @@ resource "aws_security_group" "webSg" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
-    tags {
+    tags = {
         name = "Web-sg"
     }
 }
@@ -75,14 +75,14 @@ resource "aws_security_group" "webSg" {
 resource "aws_instance" "server" {
     ami = "ami-08982f1c5bf93d976"
     instance_type = "t3.micro"
-    key_name = aws_key_pair.example.demo_key_tf
+    key_name = aws_key_pair.example.key_name
     vpc_security_group_ids = [aws_security_group.webSg.id]
     subnet_id = aws_subnet.sub1.id
 
     connection {
         type = "ssh"
         user = "ubuntu"
-        private_key = file("~/.ssh/id_ed25519") 
+        private_key = file("~/.ssh/id_rsa") 
         host = self.public_ip
     }
 
