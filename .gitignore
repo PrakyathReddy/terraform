@@ -8,3 +8,5 @@ create-ec2/terraform.tfstate
 create-ec2/.terraform.tfstate.lock.info
 .terraform.lock.hcl
 .qodo
+terraform.tfstate
+terraform.tfstate.backup
