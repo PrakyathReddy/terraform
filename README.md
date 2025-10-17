@@ -7,3 +7,4 @@ Terraform
 - reorganised the configuration into multiple files for better readability and modularity
 - used terraform.tfvars. Can be passed like: $ t plan -var-file=dev.tfvars
 - conditional expressions
+- builtin functions
