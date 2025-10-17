@@ -1,5 +1,7 @@
 .terraform/
 static-website-with-health-checker/.terraform
 static-website-with-health-checker/.terraform.lock.hcl
+static-website-with-health-checker/terraform.tfstate
+static-website-with-health-checker/terraform.tfstate.backup
 create-ec2/terraform.tfstate.backup
 create-ec2/terraform.tfstate
