@@ -5,5 +5,5 @@ Terraform
 - used variables to parameterise configuration
 - used output variables
 - reorganised the configuration into multiple files for better readability and modularity
-- used terraform.tfvars
+- used terraform.tfvars. Can be passed like: $ t plan -var-file=dev.tfvars
 - conditional expressions
