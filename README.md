@@ -12,3 +12,5 @@ Terraform
 - remote backend - state file hosted on S3 bucket
 - enable state lock using dynamo DB
 - deploy and expose an app on ec2 after configuring VPC and subnets with Internet Gateway
+- workspaces for each environment. $ t workspace new dev; $ t workspace select dev
+- integrate with hashicorp vault to manage secrets
